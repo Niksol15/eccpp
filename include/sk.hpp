@@ -1,12 +1,11 @@
 #ifndef ECCPP_SK_HPP
 #define ECCPP_SK_HPP
 
-#include "cstdint"
+#include <sodium/crypto_core_ed25519.h>
 
 namespace eccpp {
     struct PrivateKey {
-        uint32_t value[32];
+        unsigned char value[crypto_core_ed25519_SCALARBYTES];
     };
 }
-
 #endif //ECCPP_SK_HPP

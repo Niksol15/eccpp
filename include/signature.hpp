@@ -5,8 +5,7 @@
 
 namespace eccpp {
     struct Signature {
-        uint8_t R[32];
-        uint8_t s[32];
+        unsigned char R[64];
     };
 }
 

@@ -11,7 +11,9 @@ namespace eccpp {
     class X25519 {
     public:
         PublicKey GeneratePublicKey();
-        std::expected<std::uint32_t[4], StatusCode> ComputeSeceret(const PublicKey& pk);
+
+        std::expected<unsigned char[32], StatusCode> ComputeSecret(const PublicKey &pk);
+
     private:
         PrivateKey sk_;
         bool is_initialized_;

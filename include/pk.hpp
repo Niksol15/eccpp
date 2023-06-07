@@ -1,12 +1,11 @@
 #ifndef ECCPP_PK_HPP
 #define ECCPP_PK_HPP
 
-#include <cstdint>
-#include "internal.h"
+#include "sodium/crypto_core_ed25519.h"
 
 namespace eccpp {
     struct PublicKey {
-        ge25519_p3 value;
+        unsigned char value[crypto_core_ed25519_BYTES];
     };
 }
 
